@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="miPV.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="miPV_pvws_PVT" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.2.112/pvVero.webservice/pvt-webserv.php</Value>
+    </Setting>
+    <Setting Name="miPV_WSpvt_PVT" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sanherti.com/pv/pvVero.webservice/pvt-webserv.php</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

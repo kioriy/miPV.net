@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A9B2172-3E1B-49C9-B925-FC27C42A462E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>miPV</RootNamespace>
+    <AssemblyName>miPV</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LibPrintTicket">
+      <HintPath>..\packages\LibPrintTicket.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Mono.Data.Sqlite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\net4\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\net4\System.Data.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Transactions.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\net4\System.Transactions.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministradorUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministradorUsuarios.Designer.cs">
+      <DependentUpon>AdministradorUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD.cs" />
+    <Compile Include="Caja.cs" />
+    <Compile Include="Actividades.cs" />
+    <Compile Include="Clear.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracionPvt.cs" />
+    <Compile Include="CRUD.cs" />
+    <Compile Include="DetalleVenta.cs" />
+    <Compile Include="FormActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividad.Designer.cs">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsulta.Designer.cs">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioSession.Designer.cs">
+      <DependentUpon>frmInicioSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProveedor.Designer.cs">
+      <DependentUpon>FrmProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDGV.cs" />
+    <Compile Include="Lista.cs" />
+    <Compile Include="Mensaje.cs" />
+    <Compile Include="FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor.cs" />
+    <Compile Include="TicketPrint.cs" />
+    <Compile Include="UnidadList.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="ValidateForm.cs" />
+    <Compile Include="Venta.cs" />
+    <Compile Include="Producto.cs" />
+    <Compile Include="PuntoDeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PuntoDeVenta.Designer.cs">
+      <DependentUpon>PuntoDeVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
+    <Compile Include="Web References\WSpvt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdministradorUsuarios.resx">
+      <DependentUpon>AdministradorUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActividad.resx">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsulta.resx">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioSession.resx">
+      <DependentUpon>frmInicioSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProveedor.resx">
+      <DependentUpon>FrmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PuntoDeVenta.resx">
+      <DependentUpon>PuntoDeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\WSpvt\pvt-webserv.wsdl" />
+    <None Include="Web References\WSpvt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://sanherti.com/pv/pvVero.webservice/pvt-webserv.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSpvt\</RelPath>
+      <UpdateFromURL>http://sanherti.com/pv/pvVero.webservice/pvt-webserv.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>miPV_WSpvt_PVT</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets" Condition="Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" />
+  <Target Name="EnsureMonoDataSqlitePortableImported" BeforeTargets="BeforeBuild" Condition="'$(MonoDataSqlitePortableImported)' == ''">
+    <Error Condition="!Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them." />
+    <Error Condition="Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build." />
+  </Target>
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
